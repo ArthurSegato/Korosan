@@ -1,0 +1,12 @@
+{
+  "commands": {
+    "status": {
+      "services": [
+        {
+          "name": "arthursegato.com",
+          "url": "https://www.arthursegato.dev/api/status"
+        }
+      ]
+    }
+  }
+}
