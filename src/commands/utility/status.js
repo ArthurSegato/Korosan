@@ -1,23 +1,40 @@
 const { SlashCommandBuilder } = require("discord.js");
-const { commands: { status } } = require("../../config.json");
+const ms = require("ms");
+const { commands: { status: { services } } } = require("../../config.json");
 
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("status")
 		.setDescription("Checks the status of all systems."),
 	async execute(interaction) {
-		const response = "";
+		// Create a array of promisses
+		const promisses = [];
 
-		for (const service in status.services) {
+		// Ping a service and return the name, if is online or not and time
+		const pingService = async (name, url) => {
 			const timeBeginning = Date.now();
 
-			const isOnline = await fetch(service.url).then(r => r.ok ? true : false);
+			const status = await fetch(url).then(r => {
+				if (r.ok) return "online";
+				else return "offline";
+			});
 
-			const duration = (Date.now() - timeBeginning) / 1000;
+			const duration = ms(Date.now() - timeBeginning);
 
-			response.push(`${service.name} - ${isOnline} - ${duration}ms`);
-		}
+			return `${name} - ${status} - ${duration}`;
+		};
 
-		await interaction.reply(response);
+		// Execute the ping and pass it to the promisses list
+		services.forEach(s => promisses.push(pingService(s.name, s.url)));
+
+		// Once all pings are executed, concat them in a string and send result to discord
+		Promise.all(promisses)
+			.then(async (v) => {
+				let result = "";
+
+				v.forEach(e => result = result.concat(`${e}\n`));
+
+				await interaction.reply(result);
+			});
 	},
 };
