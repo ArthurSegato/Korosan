@@ -1,4 +1,5 @@
 ![Discord bot logo](/github-banner.svg "Discord bot logo")
+[![bot-test](https://github.com/ArthurSegato/korosan/actions/workflows/workflow.yml/badge.svg?event=push)](https://github.com/ArthurSegato/korosan/actions/workflows/workflow.yml)
 
 Korosan is a discord bot created to add extra features to my private server, such as check if my applications/servers/API's are online, calculate response times and etc...
 

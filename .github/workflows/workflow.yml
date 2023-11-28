@@ -11,6 +11,6 @@ jobs:
 
       # run bot
       - run: bun install
-      - run: bun dev
+      - run: bun test
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}

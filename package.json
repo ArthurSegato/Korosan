@@ -1,12 +1,12 @@
 {
-  "name": "discord-bot",
+  "name": "korosan",
   "version": "1.0.0",
-  "description": "This bot was created to add some functionalities to my personal discord server, such as checking the status of my applications, latencies and so on...",
+  "description": "Korosan is a discord bot created to add extra features to my private server, such as check if my applications/servers/API's are online, calculate response times and etc...",
   "main": "src/index.js",
   "scripts": {
     "dev": "bun .",
     "start": "bun ./src/deploy-commands.js && sleep 1 && bun dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "bun dev & echo $! > .pid && sleep 5 && kill $(cat .pid)"
   },
   "keywords": [],
   "author": "Arthur Segato",
