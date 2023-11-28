@@ -5,8 +5,6 @@ jobs:
     name: test-on-bun
     runs-on: ubuntu-latest
     steps:
-      env:
-        DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
       # Install bun
       - uses: actions/checkout@v3
       - uses: oven-sh/setup-bun@v1
@@ -14,3 +12,5 @@ jobs:
       # run bot
       - run: bun install
       - run: bun dev
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
