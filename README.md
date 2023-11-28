@@ -1,9 +1,4 @@
-<div align="center">
-    <picture >
-        <source media="(prefers-color-scheme: dark)" srcset="">
-        <img width="100%" src="">
-    </picture>
-</div>
+![Discord bot logo](/github-banner.svg "Discord bot logo")
 
 Bot created to add extra features to my private discord server, such as check if my applications/servers are online, calculate my API's response times and etc...
 
