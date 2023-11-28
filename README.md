@@ -1,8 +1,17 @@
-Bot created to add some functionalities to my personal discord server, such as checking the status of my applications, latencies and so on...
+<div align="center">
+    <picture >
+        <source media="(prefers-color-scheme: dark)" srcset="">
+        <img width="100%" src="">
+    </picture>
+</div>
+
+Bot created to add extra features to my private discord server, such as check if my applications/servers are online, calculate my API's response times and etc...
 
 ## Requirements:
 
-- Node v21.2.0 or above.
+- Node v21.2.0 or above
+  **OR**
+- Bun v1.0.14 or above
 
 ## Setup
 
@@ -22,9 +31,41 @@ yarn install
 bun install
 ```
 
-## Disclaimer
+## Development
 
-Below is a list of all the assets used in the development of this project with their respective licenses:
+Start the bot without registering slash commands:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
+
+# bun
+bun dev
+```
+
+## Production
+
+Start the bot and register slash commands:
+
+```bash
+# npm
+npm run start
+
+# pnpm
+pnpm run start
+
+# yarn
+yarn start
+
+# bun
+bun start
+```
 
 ## Contributors
 
