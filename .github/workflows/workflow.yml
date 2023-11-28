@@ -1,8 +1,8 @@
-name: bot-test
+name: bun-test
 on: [push]
 jobs:
-  test-bot:
-    name: test-on-bun
+  bun-test:
+    name: run-bot
     runs-on: ubuntu-latest
     steps:
       # Install bun
