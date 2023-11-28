@@ -1,0 +1,14 @@
+name: bot-test
+on: [push]
+jobs:
+  test-bot:
+    name: test-on-bun
+    runs-on: ubuntu-latest
+    steps:
+      # Install bun
+      - uses: actions/checkout@v3
+      - uses: oven-sh/setup-bun@v1
+
+      # run bot
+      - run: bun install
+      - run: bun dev

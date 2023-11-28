@@ -1,6 +1,6 @@
 ![Discord bot logo](/github-banner.svg "Discord bot logo")
 
-Bot created to add extra features to my private discord server, such as check if my applications/servers are online, calculate my API's response times and etc...
+Korosan is a discord bot created to add extra features to my private server, such as check if my applications/servers/API's are online, calculate response times and etc...
 
 ## Requirements:
 
