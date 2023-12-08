@@ -9,6 +9,16 @@ Korosan is a discord bot created to add extra features to my private server, suc
   **OR**
 - Bun v1.0.14 or above
 
+## Environment variables
+
+.env variables for this project:
+
+```Properties
+DISCORD_TOKEN=""
+CLIENT_ID=""
+GUILD_ID=""
+```
+
 ## Setup
 
 Make sure to install the dependencies:
