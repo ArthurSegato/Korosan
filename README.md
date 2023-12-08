@@ -3,7 +3,7 @@
 
 Korosan is a discord bot created to add extra features to my private server, such as check if my applications/servers/API's are online, calculate response times and etc...
 
-## Requirements:
+## Requirements
 
 - Node v21.2.0 or above
   **OR**
