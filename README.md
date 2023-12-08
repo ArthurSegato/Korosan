@@ -5,9 +5,7 @@ Korosan is a discord bot created to add extra features to my private server, suc
 
 ## Requirements
 
-- Node v21.2.0 or above
-  **OR**
-- Bun v1.0.14 or above
+- Bun v1.0.14 and above or Node v21.2.0 and above
 
 ## Environment variables
 
